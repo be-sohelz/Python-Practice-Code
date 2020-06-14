@@ -4,7 +4,12 @@
 # print(sys.version)
 # print(sys.version_info)
 
-import datetime
-now=datetime.datetime.now()
-print(now)
-print (now.strftime("%Y-%m-%d %H:%M:%S"))
+# import datetime
+# now=datetime.datetime.now()
+# print(now)
+# print (now.strftime("%Y-%m-%d %H:%M:%S"))
+
+# from math import pi
+# radius = float(input("Enter Your Radius "))
+# area=pi * radius**2
+# print(area)
