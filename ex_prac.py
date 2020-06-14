@@ -13,3 +13,7 @@
 # radius = float(input("Enter Your Radius "))
 # area=pi * radius**2
 # print(area)
+
+#reverse name
+name=input(" Enter Your Name : ")
+print(name[::-1])
