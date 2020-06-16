@@ -15,5 +15,11 @@
 # print(area)
 
 #reverse name
-name=input(" Enter Your Name : ")
-print(name[::-1])
+# name=input(" Enter Your Name : ")
+# print(name[::-1])
+
+#number to list and tuple
+num=input("Enter Number seprete by comma : ").split(",")
+print(type(num))
+# print(f"list : {list(num)}")
+# print(f"tuple : {tuple(num)}")
