@@ -19,7 +19,7 @@
 # print(name[::-1])
 
 #number to list and tuple
-num=input("Enter Number seprete by comma : ").split(",")
-print(type(num))
+# num=input("Enter Number seprete by comma : ").split(",")
+# print(type(num))
 # print(f"list : {list(num)}")
 # print(f"tuple : {tuple(num)}")
