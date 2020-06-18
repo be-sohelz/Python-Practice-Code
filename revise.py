@@ -117,16 +117,80 @@
 
 
 
-for num in range(20):
-    for i in range(num):
-        print(num,end=' ')
-    print('\n')
+# for num in range(20):
+#     for i in range(num):
+#         print(num,end=' ')
+#     print('\n')
 
 
+#Function
+# def addition(a,b):
+#     return a+b
+# print(addition(10,20))
+
+#input with avarage
+# def avrg(a,b,c):
+#     result=(a+b+c)/3
+#     return result
+# a=int(input("enter mark A "))
+# b=int(input("enter mark B "))
+# c=int(input("enter mark C "))
+# print(avrg(a,b,c))
+
+#return last char
+# def last(a):
+#     return a[-1]
+# print(last("sohel"))
+
+#reverse the string
+# def rev(a):
+#     return a[::-1]
+# print(rev("Sohel"))
+
+#odd or even
+# def odd_even(a):
+#     if a%2==0:
+#         print("it's even")
+#     else:
+#         print("it's odd ")
+# print(odd_even(2))
 
 
+# def is_true(a):
+#     return a%2==0
+# print(is_true(2))
 
 
+#Find Greater Number :
+# def great(a,b):
+#     if a>b:
+#         return "a is greater"
+#     else:
+#         return "b is greater"
+# # print(great(20,100))
 
+# def greater(a,b,c):
+#     if c>a and c>b:
+#         return "c is   greater"
+#     elif c>b:
+#         return "c is greater"
+#     else:
+#         return great(a,b)
+# print(greater(30,200,300))
 
+# def palindrom(a):
+#     if a == a[::-1]:
+#         return "it's polindrome"
+#     else:
+#         return "it's not a plondrome"
+# print(palindrom('soms'))
 
+#check true false for polindroms
+# def poli(a):
+#     return a==a[::-1]
+# print(poli('sos'))
+
+#default parameter's 
+# def info(n,age=24):
+#     print(f'name is {n} and age is {age}')
+# print(info('sohel'))
