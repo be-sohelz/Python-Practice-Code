@@ -195,5 +195,44 @@
 #     print(f'name is {n} and age is {age}')
 # print(info('sohel'))
 
-number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
-print(number)
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# print(number)
+# print(number[-1])
+# print(number[-7:-1])
+# print(number[:])
+# number[3]="three"
+# print(number)
+# number[4:7]=[4,5,6]
+# print(number)
+# print(number[::-1])
+
+#list in tuple using range
+# num=list(range(1,11))
+# t=('one','two','three',['four',5],'six')
+# t[3].extend([0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False])
+# t[3].append(num)
+# print(t)
+
+#add data to the list
+# fruits=[]
+# fruits.append('apple')
+# fruits.append('banana')
+# fruits.append('carrot')
+# fruits.append('dates')
+# print(fruits)
+
+fru=[]
+# if len(fru)==0:
+#     print('empty')
+# else:
+#     pass
+
+# if not fru:
+#     print('empty')
+# else:
+#     print('not empty')
+    
+# if fru:
+#     print('not empty')
+# else:
+#     print('empty')
