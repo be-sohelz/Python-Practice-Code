@@ -194,3 +194,6 @@
 # def info(n,age=24):
 #     print(f'name is {n} and age is {age}')
 # print(info('sohel'))
+
+number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+print(number)
