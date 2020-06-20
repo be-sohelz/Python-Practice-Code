@@ -221,7 +221,7 @@
 # fruits.append('dates')
 # print(fruits)
 
-fru=[]
+# fru=[]
 # if len(fru)==0:
 #     print('empty')
 # else:
@@ -243,7 +243,58 @@ fru=[]
 # print(even)
 # print(odd)
 
-even=[0,2,4,6,8]
-odd=[1,3,5,7,9]
-even.append(odd)
-print(even)
+# even=[0,2,4,6,8]
+# odd=[1,3,5,7,9]
+# even.append(odd)
+# print(even)
+
+
+#insert() data insert using index number
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# number.insert(14,'Binary')
+# print(number)
+
+#pop method 
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# popped1=number.pop()
+# popped2=number.pop(4)
+# print(popped2)
+
+#remove() emove element
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# number.remove('four')
+# print(number)
+
+# del[] for deleteting  
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# del[number[5]]
+# print(number)
+
+#some method's count(),copy(),clear(),sort(),sorted()
+# number=[0,1,2,3,'four','five','six',7.0,8.0,9.0,None,True,False]
+# print(number.count(True))
+# number_copy=number.copy()
+# print(number_copy)
+# print(number)
+# number_copy.clear()
+# print(number_copy)
+
+# number=[8,9,11,77,0,1,2,3]
+# number.sort()
+# print(number)
+# print(sorted(number))
+# print(number)
+
+#split and join
+# user_info='sohel jagirdar'.split()
+# print(user_info)
+
+# name,age='sohel,24'.split(',')
+# print(name,age)
+
+#join list
+
+# user=['sohel','usman','jagirdar']
+# name=','.join(user)
+# print(name)
+# print(type(name))
