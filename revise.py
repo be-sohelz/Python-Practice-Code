@@ -298,3 +298,145 @@
 # name=','.join(user)
 # print(name)
 # print(type(name))
+
+# For Loop for list
+# fruites=['banana','apple','mango','grapes']
+# for i in fruites:
+#     print(i)
+
+# fruites=['banana','apple','mango','grapes','kiwi']
+# i=0
+# while i<len(fruites):
+#     print(fruites[i])
+#     i+=1 
+
+# matrix=[[1,2,3],[4,5,6],[7,8,9]]
+# for i in matrix:
+#     for j in i:
+#         print(j)
+
+# matrix=[[1,2,3],[4,5,6],[7,8,9]]
+# print(matrix[1][1])
+# print(matrix[2][0])
+
+# num=[5,8,3,9,4,8,6,5,2,1]
+# def neg(n):
+#     ls=[]
+#     for i in n:
+#         ls.append(-i)
+#     return ls
+# print(neg(num))
+
+
+# def sqrts(num):
+#     l=[]
+#     for i in num:
+#         l.append(i**2)
+#     return l
+# print(sqrts(range(1,10)))
+
+#for loop for reverse the string 
+# name=['sohel','osman','jagirdar']
+# def rev(l):
+#     ls=[]
+#     for i in l:
+#         ls.append(i[::-1])
+#     return ls
+# print(rev(name))
+
+#rev list using indexing
+# num=list(range(1,10))
+# def rev(l):
+#     return l[::-1]
+# print(rev(num))
+    
+# number=list(range(1,10))
+# def rev(l):
+#     return l[::-1]
+# print(rev(number))
+
+# num=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+# def rev1(l):
+#     ls=[]
+#     for i in range(len(l)):
+#         popped=l.pop()
+#         ls.append(popped)
+#     return ls
+# print(rev1(num))
+
+#reverse() method
+# num=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+# num.reverse()
+# print(num)
+
+
+#even odd sepresion for list
+# num=[9, 8, 7, 6, 5, 4, 3, 2, 1]
+# def ev_odd(l):
+#     eve=[]
+#     odd=[]
+#     for i in l:
+#         if i%2==0:
+#             eve.append(i)
+#         else:
+#             odd.append(i)
+#     return [eve,odd]
+# print(ev_odd(num))
+
+
+#find present or not
+# a=[8, 3,6, 4, 2,9]
+# b=[9, 7, 5, 3, 1,4]
+# def present(a,b):
+#     same=[]
+#     for i in a:
+#         for j in b:
+#             if i==j:
+#                 same.append(i)
+#     return same
+# print(present(a,b))
+
+
+#count list insides list
+# lists=[1,2,3,[4,5,6],7,[8,9],10,[11,12],[13]]
+# t=0
+# for i in lists:
+#     if type(i)== list:
+#         t+=1
+# print(f'count of list is : {t}')
+
+
+#tuple
+# example=('sohel','rabi','rifa','raeah')
+# for i in example:
+#     print(i)
+
+# example=('sohel','rabi','rifa','raeah')
+# i=0
+# while i < len(example):
+#     print(example[i])
+#     i+=1
+
+#tuple unpacking
+# example=('sohel','rabi','rifa','raeah')
+# n1,n2,n3,n4=example
+# print(n1,n2,n3,n4)
+
+# def unpack(a,b):
+#     add=a+b
+#     mul=a*b
+#     return add,mul
+# add,mul=unpack(2,3)
+# print(add)
+# print(mul)
+
+
+#list inside tuple
+example=('sohel',[1,2,3,4,5],'rabi','rifa','raeah')
+example[1].insert(6,'sohel')
+ls=[]
+for i in range(len(example[1])):
+    popped=example[1].pop()
+    ls.append(popped)  
+print(example)
+print(ls)
