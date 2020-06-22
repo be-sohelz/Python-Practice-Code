@@ -432,11 +432,94 @@
 
 
 #list inside tuple
-example=('sohel',[1,2,3,4,5],'rabi','rifa','raeah')
-example[1].insert(6,'sohel')
-ls=[]
-for i in range(len(example[1])):
-    popped=example[1].pop()
-    ls.append(popped)  
-print(example)
-print(ls)
+# example=('sohel',[1,2,3,4,5],'rabi','rifa','raeah')
+# example[1].insert(6,'sohel')
+# ls=[]
+# for i in range(len(example[1])):
+#     popped=example[1].pop()
+#     ls.append(popped)  
+# print(example)
+# print(ls)
+
+
+
+#set 
+
+#remove redundant values
+# number=[1,1,2,2,3,4,5,5,6,8,9,8,9]
+# s=set(number)
+# print(s)
+# num=list(s)
+# print(num)
+
+# set_demo={1,1.1,2,3,'four','five',False}
+# set_demo.add('sohel')
+# print(set_demo)
+# set_demo.discard(False)
+# print(set_demo)
+
+#union ( | ) remove duplicates from sets
+# a={1,2,3,4}
+# b={3,4,5,6}
+# union= a | b
+# print(union)
+
+
+#intersection ( & ) show same value from sets or show common values
+# a={1,2,3,4}
+# b={3,4,5,6}
+# intr_sec= a & b
+# print(intr_sec)
+
+
+#Dictionary
+
+# user={
+#     'name':'sohel',
+#     'age':24
+# }
+# print(user)
+
+# print(user['name'])
+
+#Dictionary method 2
+# user1=dict(name='sohel',age=24,roll_mo=11)
+# for i in user1:
+#     print(user1[i])
+
+#add data to empty dictionary
+# user={}
+# user['name']='sohel'
+# user['age']=24
+# user['roll']=11
+# user['mob']=91
+# print(user.values())
+# print(user.items())
+
+#user name
+
+user={
+    'name':'sohel',
+    'age':24
+}
+
+# if 'names' in user:
+#     print('yes')
+# else:
+#     print('No')
+
+# if 'ages' in user.keys():
+#     print('yes')
+# else:
+#     print('no')
+
+if '24' in user.values():
+    print('Yes')
+else:
+    print('No')
+
+
+
+
+
+
