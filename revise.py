@@ -599,3 +599,64 @@
 #         d[i]=s.count(i)
 #     return d
 # print(word_counter('sosohehell'))
+
+
+#*args
+# def all_total(*args):
+#     total=0
+#     for i in args:
+#         total+=i
+#     return total
+# l=[1,2,4,5,6,7]
+# print(all_total(*l))
+
+
+#normal Parameter with args
+# def np_with_args(num,*args):
+    # total=0
+    # for i in args:
+    #     total+=i
+    # return total,num**2
+#     print(num)
+#     print(args)
+# print(np_with_args(1,2,4,5,6,7))
+
+
+#lambda functions
+# a=lambda a,b: a+b
+# print(a(8,2))
+
+#lambda divisible by 2 or not 
+# l=lambda a: a%2==0
+# print(l(4))
+
+#lambda
+# s=lambda a: a[-1]
+# print(s('sohel jr'))
+
+#lambda function
+# a=lambda a: len(a)>5
+# print(a('j'))
+
+#another way
+# a=lambda a: True if len(a)>5 else False
+# print(a('soheljr'))
+
+# def mul(*args):
+#     total=1
+#     for i in args:
+#         total*=i
+#     return total
+# l=[1,2,3,4,5,6,7]
+# print(mul(*l))
+
+#enumerate function --> return position and object/value
+# name=['name','age',24,5,2]
+# pose=0
+# for i in name:
+#     print(f'pose {pose}  : object {i}')
+#     pose+=1
+
+l=['name','age',24,5,2]
+for i,j in enumerate(l):
+    print(f'position is {i} and value is {j}')
