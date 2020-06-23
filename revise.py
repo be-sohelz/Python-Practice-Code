@@ -498,10 +498,10 @@
 
 #user name
 
-user={
-    'name':'sohel',
-    'age':24
-}
+# user={
+#     'name':'sohel',
+#     'age':24
+# }
 
 # if 'names' in user:
 #     print('yes')
@@ -513,13 +513,89 @@ user={
 # else:
 #     print('no')
 
-if '24' in user.values():
-    print('Yes')
-else:
-    print('No')
+# if '24' in user.values():
+#     print('Yes')
+# else:
+#     print('No')
 
 
 
+# cricketer={
+#     'dhoni':['csk','ipl','india'],
+#     'rohit':['mi','ipl','india'],
+#     'kohli':['rcb','ipl','india']
+# }
+# print(cricketer)
+# for i in cricketer.values():
+#     print(i)
+
+# for i in cricketer.items():
+#     print(i)
+
+# cricketer['shami']=['punjab','ipl','india']
+# print(cricketer)
+
+# popped=cricketer.pop('kohli')
+# print(cricketer)
+# print(popped)
 
 
+# user={
+#     'name':'sohel',
+#     'age':24,
+#     'class':'cse',
+# }
 
+# user1={
+#     'name':'sohel jagirdar',
+#     'year':3,
+#     'hobby':['cricket','machine learning','data science'],
+#     'purpose':'entrepreneur',
+# }
+# user.update(user1)
+# print(user)
+
+#dictionary overriding duplicate values
+# user={
+#     'name':'sohel',
+#     'age':23,
+#     'age':24
+# }
+# print(user)
+
+#fromkeys() method  
+# d=dict.fromkeys(['name','age','mob no'],'unknown')
+# print(d)
+
+# d=dict.fromkeys(['name','age','mob no'],['unknown','unknown','unknown'])
+# print(d)
+
+# names={
+#     'name1':'sohel',
+#     'name2':'rabi',
+#     'name3':'rifa',
+#     'name4':'raeah',
+# }
+# name=names.get('name1')
+# print(name)
+
+# if 'sohels' in names.get('name1'):
+#     print('yes')
+# else:
+#     print('no')
+
+#cube finder
+# def cube_f(n):
+#     d={}
+#     for i in n:
+#         d[i]=int(i)**3
+#     return d
+# num=input('enter number for cube : ')
+# print(cube_f(num))
+
+# def word_counter(s):
+#     d={}
+#     for i in s:
+#         d[i]=s.count(i)
+#     return d
+# print(word_counter('sosohehell'))
