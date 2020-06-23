@@ -613,11 +613,11 @@
 
 #normal Parameter with args
 # def np_with_args(num,*args):
-    # total=0
-    # for i in args:
-    #     total+=i
-    # return total,num**2
 #     print(num)
+#     total=0
+#     for i in args:
+#         total+=i
+#     return total,num**2
 #     print(args)
 # print(np_with_args(1,2,4,5,6,7))
 
@@ -657,6 +657,138 @@
 #     print(f'pose {pose}  : object {i}')
 #     pose+=1
 
-l=['name','age',24,5,2]
-for i,j in enumerate(l):
-    print(f'position is {i} and value is {j}')
+# l=['name','age',24,5,2]
+# for i,j in enumerate(l):
+#     print(f'position is {i} and value is {j}')
+
+
+#**kwargs i.e keyword arguments
+# def fun(**kwargs):
+#     print(kwargs)
+# fun(name='sohel',age='24')
+
+#unpack dictionary
+# def fun(**kwargs):
+#     for k,v in kwargs.items():
+#         print(f' key : {k} || value : {v}')
+# d={'name':'sohel','age':24}
+# fun(**d)
+
+
+# def fun(num,age=24,**kwargs):
+#     print(num) 
+#     for k,v in kwargs.items():
+#         print(f' key : {k} || value : {v}')
+# d={'name':'sohel','age':24}
+# fun(2,**d)
+
+
+#if in **kwargs dictionary 'reverse==True' then reverse list element else do print as it is.  
+# def fun(l,**kwargs):
+#     if kwargs.get('reverse')==True:
+#         for i in l:
+#             return i[::-1].title()
+#     else:
+#         for i in l:
+#             return i.title()
+# name=['sohel','ahe']
+# print(fun(name,reverse=True))
+
+
+#Map Function 
+# l=[1,2,3,4,5,6,7,8,9]
+# def sqrts(a):
+#     return a%2==0
+# print(list(filter(sqrts,l)))
+
+#other way using lambda
+# print(list(map(lambda a: a**2,l)))
+
+#other way using list comprehensions
+# l=[i**2 for i in l]
+# print(l)
+
+
+# s=['sohel','usman']
+# def rev(a):
+#     return a[::-1]
+# print(list(map(rev,s)))
+
+#other way using lambda
+# print(list(map(lambda a: a[::-1],s)))
+
+# l=[1,2,3,4,5,6,7,8,9]
+# even=filter(lambda a: a%2==0,l)
+# print(list(even))
+
+
+# user=['user1','user2','user3','user4']
+# name=['sohel','rabi','rifa','raeah']
+# print(list(zip(user,name)))
+
+
+# t=[(1,'a'),(2,'b'),(3,'c')]
+# print(dict(t))
+
+# l=[(1,2,),(3,4),(5,6),(7,8)]
+# l1,l2=list(zip(*l))
+# print(list(l1+l2))
+
+# l=[(1,2,),(3,4),(5,6),(7,8)]
+# l1,l2=list(zip(*l))
+# max_list=[]
+# for pair in zip(l1,l2):
+#     max_list.append(max(pair))
+# print(max_list)
+
+#all() function
+# l1=[1, 3, 5, 7,2]
+# l2=[2, 4, 6, 8]
+# new_l=[]
+# for i in l2:
+#     if i%2==0:
+#         new_l.append(True)
+#     else:
+#         new_l.append(False)
+# print(any(new_l))
+
+
+# l=['sohel jagirdar','s','name','age']
+# def func(a):
+#     return len(a)
+# print(min(l,key=func))
+# print(max(l,key=func))
+
+# print(min(l,key=lambda a: len(a)))
+# print(max(l,key=lambda a: len(a)))
+
+
+# l=[{'name':'sohel','score':50,'age':24},
+# {'name':'fifa','score':24,'age':2},
+# {'name':'babu','score':21,'age':4}
+# ]
+
+# print(max(l,key=lambda a: a.get('score'))['name'])
+# print(min(l,key=lambda a: a.get('score'))['name'])
+
+# result=max(l,key=lambda a: a.get('score'))
+# print(result)
+# winner=result['name']
+# print(winner)
+
+# sorted function on dictionary
+# event=[{'name':'sohel','score':50,'price':24000},
+# {'name':'fifa','score':24,'price':2100},
+# {'name':'babu','score':25,'price':201}
+# ]
+# print(sorted(event,key = lambda d: d['price']))
+
+# # for reverse the dictionary price
+# print(sorted(event,key = lambda d: d['price'], reverse=True))
+
+# scores={
+#     'sohel':{'score':70,'age':24},
+#     'rifa':{'score':50,'age':5},
+#     'rabi':{'score':52,'age':2}
+# }
+# print(sorted(scores,key=lambda i: scores[i]['score'],reverse=True ))
