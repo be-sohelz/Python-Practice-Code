@@ -29,6 +29,7 @@
 
 #reson behind printing name of scorer
 # result=max(l,key=lambda a: a.get('score'))
+# print(result)
 # winner=result['name']
 # print(winner)
 

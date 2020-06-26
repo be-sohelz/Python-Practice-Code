@@ -792,3 +792,338 @@
 #     'rabi':{'score':52,'age':2}
 # }
 # print(sorted(scores,key=lambda i: scores[i]['score'],reverse=True ))
+
+
+# def add(a,b):
+#     return a+b
+# a=add
+# print(a(2,5))
+
+
+#my map function
+# def fun(a):
+#     return a**2
+# def my_map_function(fun,l):
+#     s=[fun(i) for i in l]
+#     return s
+# l=[1,2,3,4,5,6,7,8,9]
+# print(my_map_function(fun,l))
+
+
+#function as arguments
+# def my_map(fun,l):
+#     return [fun(i) for i in l]
+# l=[1,2,3,4,5,6,7,8,9]
+# print(my_map(lambda a: a**2,l))
+
+
+#function return function / closure
+# def outer_fun():
+#     def inner_fun():
+#         print('this is inner function calling')
+#     return inner_fun
+# v=outer_fun()
+# v()
+
+#outer funtion with massage
+# def outer(msg):
+#     def inner():
+#         print(f'this is the massage : {msg}')
+#     return inner
+# v=outer('hello from sohel')
+# v()
+
+# def power(n,p):
+#     def number():
+#         print(n**p)
+#     return number
+# v=power(3,3)
+# v()
+
+# def p(x):
+#     def n(n):
+#         return n**x
+#     return n
+# v=p(3)
+# print(v(3))
+
+
+
+# def g():
+#     print("Hi, it's me 'g'")
+#     print("Thanks for calling me")  
+# def f(func):
+#     print("Hi, it's me 'f'")
+#     print("I will call 'func' now")
+#     func()    
+#     print("func's real name is " + func.__name__)
+# f(g)
+
+# def decor_func(any_func):
+#     def wrap_func():
+#         print('This is wrapper function1')
+#         any_func()
+#         print('This is wrapper function2')
+#     print('this is decor_func')
+#     return wrap_func
+# def func1():
+#     print('this is any_func')
+# v=decor_func(func1)
+# v()
+
+# @decor_func
+# def func2():
+#     print('this is func2 ')
+# func2()
+
+
+# import time
+# import math
+# def outer(func):
+#     def inner(*args,**kwargs):
+#         begin=time.time()
+#         func(*args,**kwargs)
+#         end=time.time()
+#         print("Total time taken in : ", end - begin)
+#     return inner
+# @outer
+# def func1():
+#     time.sleep(2) 
+# # func1()
+
+# @outer
+# def func2(a,b):
+#     print((a+b)**2)
+# a,b=1,2
+# func2(a,b)
+
+# def outer(func):
+#     def inner(*args,**kwargs):
+#         s=[]
+#         for i in args:
+#             s.append(type(i)==int)
+#         if all(s):
+#             return func(*args,**kwargs)
+#         return 'all element are not same type'
+#     return inner
+# @outer
+# def add(*l):
+#     total=0
+#     for i in l:
+#         total+=i
+#     return total
+# l=[1,2,3,4,5,6,7,8,'9']
+# print(add(*l))
+
+# def check_data(data_type1,data_type2):
+#     def outer(func):
+#         def inner(*args,**kwargs):
+#             s=[]
+#             for i in args:
+#                 s.append(type(i)==data_type1 or data_type2)
+#             if all(s):
+#                 return func(*args,**kwargs)
+#             return 'not same datatype'
+#         return inner
+#     return outer
+# @check_data(int,float)
+# def name(*l):
+#     total=0
+#     for i in l:
+#         total+=i
+#     return total
+# l=[1,2,3,4,5,6.6,7,8.2,7]
+# print(name(*l))
+
+
+#Generator -->fast,eficient,time and memory saving,iterable only ones, create using 'yield' keyword
+# def num(n):
+#     for i in range(1,n+1):
+#         yield i
+# for i in (num(10)):
+#     print(i)
+
+# def num(n):
+#     for i in range(1,n+1):
+#         yield i**2
+# for i in num(100):
+#     print(i)
+
+# y=(i**2 for i in range(100000))
+# for i in y:
+#     print(i)
+
+# import time
+# begin=time.time()
+# l=(i**2 for i in range(1,1000000))
+# end=time.time()
+# print(end-begin)
+
+# def my_map(*n):
+#     li=[i**2 for i in n]
+#     yield li
+# l=[1,2,3,4,5,6]
+# var=my_map(*l)
+# print(var)
+# for i in var:
+#     print(i)
+
+
+# def my_map(func,*args):
+#     s=[]
+#     for i in args:
+#         s.append(func(i))
+#     yield s
+# l=[1,2,3,4,5,6]
+# var=my_map(lambda a: a**2,*l)
+# print(var)
+# for i in var:
+#     print(i)
+
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.person_name=name
+#         self.person_age=age
+#         print('Constructor Called..')
+# p1=Person('sohel',23)
+# p2=Person('jr',22)
+# print(p1.person_name)
+# print(p2.person_age)
+
+
+#class
+# class User:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+
+#     def u_age(self):
+#         return self.age>18
+
+# u1=User('sohel',24)
+# # print(u1.name)
+
+# u2=User('so',17)
+# print(u2.u_age())
+
+
+
+# class Student:
+#     def __init__(self,name,no,city):
+#         self.name=name
+#         self.no=no
+#         self.city=city
+
+#     def state(self):
+#         if self.city=='Latur':
+#             return 'City State is Maharashtra'
+
+# s1=Student('sohel',11,'Latur')
+# # print(s1.name)
+# print(s1.state())
+
+
+# class Mobile:
+#     dis=10
+#     def __init__(self,model,price):
+#         self.model=model
+#         self.price=price
+#     def discount(self):
+#         disc=self.price-self.price*self.d/100
+#         return disc
+
+# m1=Mobile('nokia',20000)
+# m2=Mobile('LG',25000)
+# m2.dis=50
+# # print(m1.price)
+# print(m2.discount())
+
+
+
+#class variable
+# class Circle:
+#     pi=3.14    #'''class object'''
+#     def __init__(self,radius):
+#         self.radius=radius
+
+#     def area(self):
+#         area=Circle.pi*self.radius**2
+#         return area
+
+#     def circumfrence(self):
+#         circumf=2*Circle.pi*self.radius
+#         return circumf
+    
+# c1=Circle(3)
+# print(c1.circumfrence())
+
+
+
+#inheritance (simple)
+
+# class Phone: ##parent class
+#     def __init__(self,brand,model,price):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
+#     def info(self):
+#         return f'brand is {self.brand} model is {self.model} at price {self.price}'
+#     def call(self,num):
+#         print(f'callig {num} .....')
+#         return 'call ended'
+
+# class Smartphone(Phone): ##cild class
+#     def __init__(self,brand,model,price,memory,camera,os):
+#         super().__init__(brand,model,price)
+#         self.memory=memory
+#         self.camera=camera
+#         self.os=os
+#     def smartinfo(self):
+#         return f'memory is {self.memory} and camera is {self.camera}'
+
+# s1=Smartphone('ASUS','A9',18000,'8gb','18 MP','OREO')
+# # print(s1.info())
+# print(s1.call('+91-8329108070'))
+
+
+
+#multiple inheritance
+
+class Phone:
+    def __init__(self,brand,model,price):
+        self.brand=brand
+        self.model=model
+        self.price=price
+    def info(self):
+        return f'brand is {self.brand} model is {self.model} at price {self.price}'
+    def call(self,num):
+        print(f'callig {num} .....')
+        return 'call ended'
+
+class Smartphone(Phone):
+    def __init__(self,brand,model,price,memory,camera,os):
+        super().__init__(brand,model,price)
+        self.memory=memory
+        self.camera=camera
+        self.os=os
+    def smartinfo(self):
+        return f'memory is {self.memory} and camera is {self.camera}'
+
+class Smartphone2(Smartphone):
+    def __init__(self,brand,model,price,memory,camera,os,cpu):
+            super().__init__(brand,model,price,memory,camera,os)
+            self.cpu=cpu
+    def smartinfo2(self):
+        return f'cpu is {self.cpu} '
+
+p1=Phone('nokia',1000,1500)
+print(p1.info())
+
+s1=Smartphone('1+',5,120000,'8GB','12mp','android')
+print(s1.info())
+
+s2=Smartphone2('1+',5,120000,'8GB','12mp','android','SnapDragon - 856')
+
+print(s2.smartinfo2())
+

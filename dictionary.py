@@ -179,7 +179,7 @@
 # number=dict.fromkeys(range(1,11),'unknown')
 # print(number)
 
-#get() method --> get kry and return value or return None if value not present
+#get() method --> get key and return value or return None if value not present
 # names={
 #     'name1':'sohel',
 #     'name2':'rabi',

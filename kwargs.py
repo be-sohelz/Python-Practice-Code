@@ -36,7 +36,7 @@
 # fun('sohel', 1,2,3, a=1,b=2)
 
 
-# #
+#if in **kwargs dictionary 'reverse==True' then reverse list element else do print as it is.  
 # def fun(l,**kwargs):
 #     if kwargs.get('reverse')==True:
 #         for i in l:
