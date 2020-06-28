@@ -1088,42 +1088,136 @@
 
 
 
-#multiple inheritance
+#multilevel inheritance
 
-class Phone:
-    def __init__(self,brand,model,price):
-        self.brand=brand
-        self.model=model
-        self.price=price
-    def info(self):
-        return f'brand is {self.brand} model is {self.model} at price {self.price}'
-    def call(self,num):
-        print(f'callig {num} .....')
-        return 'call ended'
+# class Phone:
+#     def __init__(self,brand,model,price):
+#         self.brand=brand
+#         self.model=model
+#         self.price=price
+#     def info(self):
+#         return f'brand is {self.brand} model is {self.model} at price {self.price}'
+#     def call(self,num):
+#         print(f'callig {num} .....')
+#         return 'call ended'
 
-class Smartphone(Phone):
-    def __init__(self,brand,model,price,memory,camera,os):
-        super().__init__(brand,model,price)
-        self.memory=memory
-        self.camera=camera
-        self.os=os
-    def smartinfo(self):
-        return f'memory is {self.memory} and camera is {self.camera}'
+# class Smartphone(Phone):
+#     def __init__(self,brand,model,price,memory,camera,os):
+#         super().__init__(brand,model,price)
+#         self.memory=memory
+#         self.camera=camera
+#         self.os=os
+#     def smartinfo(self):
+#         return f'memory is {self.memory} and camera is {self.camera}'
 
-class Smartphone2(Smartphone):
-    def __init__(self,brand,model,price,memory,camera,os,cpu):
-            super().__init__(brand,model,price,memory,camera,os)
-            self.cpu=cpu
-    def smartinfo2(self):
-        return f'cpu is {self.cpu} '
+# class Smartphone2(Smartphone):
+#     def __init__(self,brand,model,price,memory,camera,os,cpu):
+#             super().__init__(brand,model,price,memory,camera,os)
+#             self.cpu=cpu
+#     def smartinfo2(self):
+#         return f'cpu is {self.cpu} '
 
-p1=Phone('nokia',1000,1500)
-print(p1.info())
+# p1=Phone('nokia',1000,1500)
+# print(p1.info())
 
-s1=Smartphone('1+',5,120000,'8GB','12mp','android')
-print(s1.info())
+# s1=Smartphone('1+',5,120000,'8GB','12mp','android')
+# print(s1.info())
 
-s2=Smartphone2('1+',5,120000,'8GB','12mp','android','SnapDragon - 856')
+# s2=Smartphone2('1+',5,120000,'8GB','12mp','android','SnapDragon - 856')
+# print(s2.smartinfo2())
 
-print(s2.smartinfo2())
 
+
+#Multilevel inheritance prta
+
+# class A:
+#     def __init__(self,name):
+#         self.name=name
+#     def names(self):
+#         print(f'calling from "A" & name is {self.name}')
+# class B(A):
+#     def __init__(self,name,age):
+#         super().__init__(name)
+#         self.age=age
+#     def ages(self):
+#         print(f'calling from "B" & name {self.name} age is {self.age}')
+# class C(B):
+#     def __init__(self,name,age,city):
+#         super().__init__(name,age)
+#         self.city=city
+#     def cities(self):
+#         print(f'calling from a & name {self.name} age is {self.age} from city {self.city}')
+
+# a1=A('sohel')
+# b1=B('sohel',24)
+# c1=C('sohel',24,'latur')
+
+# print(a1.names())
+
+# print(b1.ages())
+# print(b1.names())
+
+# print(c1.names())
+# print(c1.ages())
+# print(c1.cities())
+
+
+#multiple inheritance 
+
+# class A:
+#     def __init__(self,name):
+#         self.name=name
+#     def names(self):
+#         print(f'calling from "A" & name is {self.name}')
+# class B(A):
+#     def __init__(self,name,age):
+#         super().__init__(name)
+#         self.age=age
+#     def ages(self):
+#         print(f'calling from "B" & name {self.name} age is {self.age}')
+# class C(A):
+#     def __init__(self,name,city):
+#         super().__init__(name)
+#         self.city=city
+#     def cities(self):
+#         print(f'calling from a & name {self.name}  from city {self.city}')
+# a1=A('sohel')
+# b1=B('sohel',24)
+# c1=C('sohel','latur')
+
+# print(a1.names())
+# print(b1.ages())
+# print(c1.cities())
+
+# def add(a,b):
+#     if (type(a)==int and type(b)==int):
+#         return a+b
+#     raise TypeError('wrong data type given')
+# print(add(5,'4'))
+
+
+# class Animal:
+#     def __init__(self,name):
+#         self.name=name
+#     def sound(self):
+#         raise NotImplementedError('You Must Implement This Method In your class, not Inherited')
+# class Cat(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.name=name
+#         self.breed=breed
+#     def sound(self):
+#         return 'Meow Meow'
+# class Dog(Animal):
+#     def __init__(self,name,breed):
+#         super().__init__(name)
+#         self.name=name
+#         self.breed=breed
+#     def sound(self):
+#         return 'Bhoww Bhoww'
+
+# c1=Cat('phibie','Persian')
+# print(c1.sound())
+
+# d1=Dog('jazz','Pibull')
+# print(d1.sound())
