@@ -1189,6 +1189,13 @@
 # print(b1.ages())
 # print(c1.cities())
 
+
+
+
+
+#Raise Error and Exeption Handling
+
+
 # def add(a,b):
 #     if (type(a)==int and type(b)==int):
 #         return a+b
@@ -1221,3 +1228,89 @@
 
 # d1=Dog('jazz','Pibull')
 # print(d1.sound())
+
+
+# def add(a,b):
+#     if (type(a)==int and type(b)==int):
+#         return a+b
+#     else:
+#         raise TypeError('entered Wrong Data type')
+# print(add(2,'3'))
+
+# class Mobile:
+#     def __init__(self,name):
+#         self.name=name
+    
+
+# class Smartphone:
+#     def __init__(self):
+#         self.mobilestore=[]  
+
+#     def mobile(self,new_mob):
+#         if isinstance(new_mob,Mobile):
+#             self.mobilestore.append(new_mob)
+#         else:
+#             raise TypeError('Object Must Be Instance Of Mobile Class')
+
+# onepluse=Mobile('OnePlus 5')
+# smart=Smartphone()
+# print(smart.mobile(onepluse))
+# phones=smart.mobilestore
+# print(phones[0].name)
+
+
+#exeption handling try, catch, exept:
+
+# while True:
+#     try:
+#         age=int(input('Enter An Number : '))
+#         break
+#     except ValueError:
+#         print('wrong data entred ... please try again')
+#     except:
+#         print('Something Is Wrong ....')
+# if age > 18 :
+#     print('You Are Eligible !')
+# else:
+#     print('You Are Under Age !')
+
+
+#else , finaly block
+# while True:
+#     try:
+#         age=int(input('Enter Your Age : '))
+#     except ValueError:
+#         print('Enter Wrong Datatype... Try Again')
+#     except:
+#         print('Something is Wrong ..')
+#     else:
+#         if age>18:
+#             print('Eligible')
+#         else:
+#             print('Not Eligible')
+#         break
+#     finally:
+#         print(f'Age is {age}')
+
+# def div(a,b):
+#     try:
+#         d=a/b
+#     except ValueError:
+#         print('wrong Datatype Entered..')
+#     except:
+#         print('something is wrong')
+#     else:
+#         return d
+# print(div(10,2))
+
+
+
+#Custom Exeption Error
+
+    # class NameTooShortError(ValueError):
+    #     pass
+
+    # def validate(name):
+    #     if len(name) < 5:
+    #         raise NameTooShortError('Name Too Short..')
+    # print(validate('sohe'))
