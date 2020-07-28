@@ -1330,3 +1330,10 @@ print(new_add(8,2))
 
 fun=lambda s: len(s)>5
 print(fun('jagirdar'))
+
+#if else in normal function 
+def funs(s):
+    if len(s)>5:
+        return True
+    return False
+print(funs('sohel jagirdar'))
