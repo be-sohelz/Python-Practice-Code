@@ -1317,3 +1317,8 @@
     
 
     #this is my new code 
+    
+    #My Py
+def new_add(a,b):
+    return a+b
+print(new_add(8,2))
