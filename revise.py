@@ -1322,3 +1322,11 @@
 def new_add(a,b):
     return a+b
 print(new_add(8,2))
+
+
+
+##new lambda
+#len(string) >5 print -->True  lambdaa
+
+fun=lambda s: len(s)>5
+print(fun('jagirdar'))
